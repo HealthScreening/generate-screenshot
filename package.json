@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/HealthScreening/generate-screenshot#readme",
   "dependencies": {
-    "@healthscreening/object-to-wrapper": "^1.0.0",
+    "@healthscreening/object-to-wrapper": "^2.0.0",
     "@healthscreening/screening-types": "^1.0.0",
     "@healthscreening/success-screening-clone": "^1.0.0",
     "puppeteer": "^13.0.0"
