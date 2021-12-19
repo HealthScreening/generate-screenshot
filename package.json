@@ -23,7 +23,7 @@
   "dependencies": {
     "@healthscreening/object-to-wrapper": "^2.0.0",
     "@healthscreening/screening-types": "^1.0.0",
-    "@healthscreening/success-screening-clone": "^1.0.0",
+    "@healthscreening/success-screening-clone": "^1.0.1",
     "puppeteer": "^13.0.0"
   },
   "devDependencies": {
