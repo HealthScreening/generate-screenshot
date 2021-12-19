@@ -1,0 +1,37 @@
+{
+  "name": "@healthscreening/generate-screenshot",
+  "version": "1.0.0",
+  "description": "Generates a valid health screening screenshot.",
+  "main": "generateScreenshot.js",
+  "types": "generateScreenshot.d.ts",
+  "scripts": {
+    "test": "tsc -p tsconfig.json && mocha generateScreenshot.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HealthScreening/generate-screenshot.git"
+  },
+  "engines": {
+    "node": ">=8.X.X"
+  },
+  "author": "PythonCoderAS <sarkaraoyan@gmail.com>",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/HealthScreening/generate-screenshot/issues"
+  },
+  "homepage": "https://github.com/HealthScreening/generate-screenshot#readme",
+  "dependencies": {
+    "@healthscreening/object-to-wrapper": "^1.0.0",
+    "@healthscreening/screening-types": "^1.0.0",
+    "@healthscreening/success-screening-clone": "^1.0.0",
+    "puppeteer": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.0",
+    "typescript": "^4.5.4",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
