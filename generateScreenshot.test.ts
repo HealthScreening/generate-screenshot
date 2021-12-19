@@ -1,9 +1,11 @@
 import {assert} from "chai"
-import generateScreenshot, {startupBrowser} from "./generateScreenshot";
+import generateScreenshot, {closeBrowser, startupBrowser} from "./generateScreenshot";
 
 describe("generateScreenshot Test Suite", () => {
-    it("should generate a guest screenshot", async () => {
+    it("Startup browser", async () => {
         await startupBrowser();
+    });
+    it("should generate a guest screenshot", async () => {
         await generateScreenshot({
             name: "John Doe",
             date: "2020-01-01",
@@ -12,7 +14,6 @@ describe("generateScreenshot Test Suite", () => {
         assert.isTrue(true)
     })
     it("should generate a student screenshot", async () => {
-        await startupBrowser();
         await generateScreenshot({
             name: "John Doe",
             date: "2020-01-01",
@@ -21,7 +22,6 @@ describe("generateScreenshot Test Suite", () => {
         assert.isTrue(true)
     })
     it("should generate a employee screenshot", async () => {
-        await startupBrowser();
         await generateScreenshot({
             name: "John Doe",
             date: "2020-01-01",
@@ -30,7 +30,6 @@ describe("generateScreenshot Test Suite", () => {
         assert.isTrue(true)
     })
     it("should generate a guest screenshot on an iPhone 6", async () => {
-        await startupBrowser();
         await generateScreenshot({
             name: "John Doe",
             date: "2020-01-01",
@@ -39,4 +38,7 @@ describe("generateScreenshot Test Suite", () => {
         });
         assert.isTrue(true)
     })
+    it('Close browser', async () => {
+        await closeBrowser();
+    });
 })
