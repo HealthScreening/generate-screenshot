@@ -1,6 +1,6 @@
 {
   "name": "@healthscreening/generate-screenshot",
-  "version": "1.0.0",
+  "version": "1.10",
   "description": "Generates a valid health screening screenshot.",
   "main": "generateScreenshot.js",
   "types": "generateScreenshot.d.ts",
