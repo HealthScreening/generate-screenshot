@@ -15,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import {Browser, devices} from "puppeteer";
+import {Browser, devices, Page} from "puppeteer";
 import * as Buffer from "buffer";
 import objectToWrapper  from "@healthscreening/object-to-wrapper";
 import { resolve } from "path";
@@ -52,6 +52,18 @@ export interface GetScreenshotParams {
 
 const baseURL = "file://" + resolve(require.resolve("@healthscreening/success-screening-clone"), "..", "page.html") + "?"
 
+async function closePage(page: Page){
+    try {
+        await page.close();
+    } catch (e: any) {
+        if (e.message && e.message === "Protocol error: Connection closed. Most likely the page has been closed."){
+            // Ignore
+        } else {
+            throw e;
+        }
+    }
+}
+
 export default async function generateScreenshot(
     options: GetScreenshotParams
 ): Promise<Buffer> {
@@ -64,6 +76,6 @@ export default async function generateScreenshot(
         });
         return (await page.screenshot()) as Buffer;
     } finally {
-        await page.close();
+        await closePage(page)
     }
 }
