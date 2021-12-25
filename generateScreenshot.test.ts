@@ -1,10 +1,11 @@
 import {assert} from "chai"
 import generateScreenshot, {closeBrowser, startupBrowser} from "./generateScreenshot";
 
+setup(async () => {
+    await startupBrowser();
+})
+
 describe("generateScreenshot Test Suite", () => {
-    it("Startup browser", async () => {
-        await startupBrowser();
-    });
     it("should generate a guest screenshot", async () => {
         await generateScreenshot({
             name: "John Doe",
@@ -38,7 +39,8 @@ describe("generateScreenshot Test Suite", () => {
         });
         assert.isTrue(true)
     })
-    it('Close browser', async () => {
-        await closeBrowser();
-    });
+})
+
+teardown(async () => {
+    await closeBrowser();
 })
