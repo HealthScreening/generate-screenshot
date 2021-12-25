@@ -1,11 +1,11 @@
 {
   "name": "@healthscreening/generate-screenshot",
-  "version": "1.10",
+  "version": "1.1.0",
   "description": "Generates a valid health screening screenshot.",
   "main": "generateScreenshot.js",
   "types": "generateScreenshot.d.ts",
   "scripts": {
-    "test": "tsc -p tsconfig.json && mocha generateScreenshot.test.js"
+    "test": "tsc -p tsconfig.json && mocha generateScreenshot.test.js --timeout 30000"
   },
   "repository": {
     "type": "git",
